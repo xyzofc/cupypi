@@ -12,9 +12,11 @@ jobs:
       uses: actions/checkout@v4
     - name: Check dirs and files
       uses: ./
+    - name: Go to the test folder
+      run: cd test
     - name: Setup python
       uses: actions/setup-python@v3
-      with: 
+      with:
         python-version: "3.x"
     - name: Configure pip 
       run: python -m pip install --upgrade pip
