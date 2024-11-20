@@ -1,0 +1,27 @@
+{
+  "name": "cupypi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "github actions",
+    "yml",
+    "actions",
+    "python",
+    "npm",
+    "pypi",
+    "project",
+    "build",
+    "publish"
+  ],
+  "author": "caique9014",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
