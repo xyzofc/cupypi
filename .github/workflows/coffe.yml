@@ -1,7 +1,6 @@
-name: "Get file"
-
+name: "Check dir/file"
 on: 
-  workflow_run:
+  workflow_dispatch:
     
 
 jobs:
@@ -15,4 +14,3 @@ jobs:
       uses: ./
       with:
         password: ${{ secrets.CPYPI_API_TOKEN }}
-        repository-url: https://test.pypi.org/legacy/
