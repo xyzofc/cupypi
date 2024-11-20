@@ -1,7 +1,9 @@
 "use strict";
+const { execSync } = require('child_process')
+execSync('npm install @actions/core')
+execSync('npm install @actions/github')
 const core_1 = require('@actions/core')
 const octokit = require('@actions/github')
-const { execSync } = require('child_process')
 async function run(){
     const pwd = (0, core_1.getInput)("password")
     console.log('Upgrading/Installing pip..')
