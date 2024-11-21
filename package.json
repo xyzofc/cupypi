@@ -2,6 +2,7 @@
   "name": "cupypi",
   "version": "1.0.0",
   "description": "A simple publish github action",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
