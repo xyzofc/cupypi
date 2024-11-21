@@ -1,7 +1,7 @@
 {
   "name": "cupypi",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple publish github action",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -27,5 +27,16 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitLabBR/cupypi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GitLabBR/cupypi/issues"
+  },
+  "homepage": "https://github.com/GitLabBR/cupypi#readme"
 }
