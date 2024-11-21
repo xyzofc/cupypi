@@ -3,10 +3,14 @@ description: "Publish your python project to pypi quickly. (using token)"
 author: "GitLabBR"
 
 inputs:
+    pytoken:
+        type: string
+        description: "Your pypi token"
+        required: true
     password:
-      type: string
-      description: "Your secret *pypi token*"
-      required: true
+        type: string
+        description: "Your pypi password"
+        required: true
 
 runs:
   using: node16
