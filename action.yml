@@ -1,11 +1,11 @@
-name: "Cupypi Publish Python Package"
-description: "Publish your python project to pypi quickly. (using token)"
+name: "Cupypi Pypi Publish on Release"
+description: "Publish your python project to pypi quickly. (On create new release)"
 author: "GitLabBR"
 
 inputs:
-    token:
+    username:
         type: string
-        description: "Your pypi token"
+        description: "Your pypi username"
         required: true
     password:
         type: string
