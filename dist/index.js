@@ -5,6 +5,7 @@ async function run() {
   try {
 
     // Get the input from the workflow
+    const token = process.env.PYTOKEN
     const pwd = process.env.PASSWORD;
 
     console.log("Password input received:", pwd);
@@ -14,7 +15,7 @@ async function run() {
     execSync("python -m pip install build", { stdio: "inherit" });
     execSync("python -m build", { stdio: "inherit" });
     execSync("python -m pip install twine", { stdio: "inherit" });
-    execSync(`python -m twine upload -u __token__ -p ${pwd} dist/*`, {
+    execSync(`python -m twine upload -u ${token} -p ${pwd} dist/*`, {
       stdio: "inherit",
     });
   } catch (error) {
