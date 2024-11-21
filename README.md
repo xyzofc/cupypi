@@ -8,5 +8,5 @@ A simple publish github action
   uses: GitLabBR/cupypi@v2.8
   with:
     token: "${{ secrets.PYPI_API_TOKEN }}"
-    password: "${{ secrets.PYPI_API_PASSWORD }}
+    password: "${{ secrets.PYPI_API_PASSWORD }}"
 ```
