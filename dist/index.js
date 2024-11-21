@@ -12,7 +12,7 @@ async function run() {
     console.log("Password input received:", pwd);
     execSync("python -m pip install --upgrade pip", { stdio: "inherit" });
     execSync("python -m pip install twine", { stdio: "inherit" });
-    execSync("python -m pip install --upgrade twine")
+    execSync("python -m pip install --upgrade twine", { stdio: "inherit" });
     execSync(`python -m twine upload -u ${user} -p ${pwd} dist/*`, {
       stdio: "inherit",
     });
