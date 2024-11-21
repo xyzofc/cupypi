@@ -3,7 +3,7 @@ description: "Publish your python project to pypi quickly. (using token)"
 author: "GitLabBR"
 
 inputs:
-    pytoken:
+    token:
         type: string
         description: "Your pypi token"
         required: true
