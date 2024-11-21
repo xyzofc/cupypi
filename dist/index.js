@@ -3,22 +3,30 @@ import { execSync } from "child_process";
 
 async function run() {
   try {
-    // Verifique se o script está rodando no GitHub Actions
-    const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-    if (!isGithubActions) {
-      console.warn("Warning: This script is not running inside GitHub Actions.");
+    // Ensure this script runs only when invoked as a GitHub Action
+    const isCustomAction = process.env.GITHUB_ACTION_REPOSITORY === "GitLabBR/cupypi";
+    if (isCustomAction) {
+      console.warn("Running as root?");
+      return;
     }
 
-    // Obtenha o input do workflow
+    // Get the input from the workflow
     const pwd = process.env.INPUT_PASSWORD;
-    if (!pwd) {
-      throw new Error("Input 'password' was not provided or is empty.");
-    }
 
     console.log("Password input received:", pwd);
 
-    // Executar os comandos necessários
+    // Execute the required commands
     execSync("python -m pip install --upgrade pip", { stdio: "inherit" });
     execSync("python -m pip install build", { stdio: "inherit" });
     execSync("python -m build", { stdio: "inherit" });
-    execSync("python -m pip install twine", { 
+    execSync("python -m pip install twine", { stdio: "inherit" });
+    execSync(`python -m twine upload -u __token__ -p ${pwd} dist/*`, {
+      stdio: "inherit",
+    });
+  } catch (error) {
+    console.error("Error during execution:", error.message);
+    process.exit(1);
+  }
+}
+
+run();
