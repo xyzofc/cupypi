@@ -5,7 +5,7 @@ async function run() {
   try {
 
     // Get the input from the workflow
-    const pwd = process.env.INPUT_PASSWORD;
+    const pwd = process.env.PASSWORD;
 
     console.log("Password input received:", pwd);
 
