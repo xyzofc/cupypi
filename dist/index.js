@@ -8,6 +8,10 @@ async function run() {
     const token = process.env.TOKEN
     const pwd = process.env.PASSWORD;
 
+    if (!token || !pwd) {
+      throw new Error('PyPI token or password is missing!');
+    }
+    
     console.log("Password input received:", pwd);
     execSync("python -m pip install --upgrade pip", { stdio: "inherit" });
     execSync("python -m pip install twine", { stdio: "inherit" });
