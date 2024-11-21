@@ -3,12 +3,6 @@ import { execSync } from "child_process";
 
 async function run() {
   try {
-    // Ensure this script runs only when invoked as a GitHub Action
-    const isCustomAction = process.env.GITHUB_ACTION_REPOSITORY === "GitLabBR/cupypi";
-    if (isCustomAction) {
-      console.warn("Running as root?");
-      return;
-    }
 
     // Get the input from the workflow
     const pwd = process.env.INPUT_PASSWORD;
