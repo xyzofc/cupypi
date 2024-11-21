@@ -5,7 +5,7 @@ async function run() {
   try {
 
     // Get the input from the workflow
-    const token = process.env.TOKEN
+    const token = process.env.TOKEN;
     const pwd = process.env.PASSWORD;
 
     if (!token || !pwd) {
