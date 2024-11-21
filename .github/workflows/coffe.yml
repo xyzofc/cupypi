@@ -1,11 +1,14 @@
 name: "Check dir/file"
 on: 
-  workflow_dispatch:
-    inputs:
-      password:
-        type: string
-        description: "Your secret *pypi token*"
-        required: true
+  release:
+    types: [published]
+    
+  
+inputs:
+    password:
+      type: string
+      description: "Your secret *pypi token*"
+      required: true
 
 jobs:
   deploy:
