@@ -15,6 +15,6 @@ jobs:
     - name: Checkout plugin
       uses: actions/checkout@v4
     - name: Echo
-      run: echo "Checkout Loaded."
+      run: echo "Checkout Loaded. Now checking files."
     - name: Check dirs and files
       uses: ./
