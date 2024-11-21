@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
     inputs:
       password:
-        description: "Your pypi token"
         type: string
+        description: "Your secret *pypi token*"
         required: true
 
 jobs:
