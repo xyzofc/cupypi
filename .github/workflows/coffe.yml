@@ -18,5 +18,3 @@ jobs:
       run: echo "Checkout Loaded."
     - name: Check dirs and files
       uses: ./
-      with:
-        password: ${{ secrets.TEST_PYPI_TOKEN }}
