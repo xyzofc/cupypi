@@ -9,12 +9,7 @@ async function run() {
     const pwd = process.env.PASSWORD;
 
     console.log("Password input received:", pwd);
-    const fullRepo = process.env.GITHUB_REPOSITORY; // e.g., "owner/repo"
-
-    const repoName = fullRepo.split("/")[1]; // Extracts the "repo" part
-    
-    // Execute the required commands
-    execSync(`cd "/home/runner/work/${repoName}"`)
+    execSync("cd ..", { stdio: "inherit" });
     execSync("python -m pip install --upgrade pip", { stdio: "inherit" });
     execSync("python -m pip install build", { stdio: "inherit" });
     execSync("python -m build", { stdio: "inherit" });
