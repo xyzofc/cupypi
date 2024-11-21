@@ -2,7 +2,11 @@ name: "Cupypi Publish Python Package"
 description: "Publish your python project to pypi quickly. (using token)"
 author: "GitLabBR"
 
-
+inputs:
+    password:
+      type: string
+      description: "Your secret *pypi token*"
+      required: true
 
 runs:
   using: node16
