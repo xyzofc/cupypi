@@ -5,7 +5,7 @@ A simple publish github action
 ```yaml
 - name Install packages (required to run action)
 - name: Cupypi Publish Python Package
-  uses: GitLabBR/cupypi@v2.3
+  uses: GitLabBR/cupypi@v2.8
   with:
     token: "${{ secrets.PYPI_API_TOKEN }}"
     password: "${{ secrets.PYPI_API_PASSWORD }}
