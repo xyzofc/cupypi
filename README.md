@@ -7,5 +7,10 @@ A simple publish github action
 - name: Cupypi Publish Python Package
   uses: GitLabBR/cupypi@v2.9
   with:
-    password: "${{ secrets.PYPI_API_PASSWORD }}"
+    username: your_username_here
+    password: your_password_here
+  env: 
+    TWINE_PASSWORD: your_password_here
+    TWINE_USERNAME: your_username_here
 ```
+
