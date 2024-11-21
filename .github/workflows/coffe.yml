@@ -11,9 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout plugin
+    - name: Check Dirs and files
       uses: actions/checkout@v4
-    - name: Echo
-      run: echo "Checkout Loaded. Now checking files."
-    - name: Check dirs and files
-      uses: ./
+    - name: Logs
+      run: echo "Checkout done."
+    
