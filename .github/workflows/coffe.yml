@@ -16,4 +16,4 @@ jobs:
     - name: Check dirs and files
       uses: ./
       with:
-        password: ${{ secrets.PYPI_API_TOKEN }}
+        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
