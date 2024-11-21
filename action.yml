@@ -4,6 +4,7 @@ author: "GitLabBR"
 
 inputs:
     password:
+        type: string
         description: "Your secret (${{ secrets.PYPI_API_TOKEN }}) *pypi token*"
         required: true
 
