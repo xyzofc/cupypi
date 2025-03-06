@@ -27,8 +27,7 @@ jobs:
               run: python -m twine upload dist/*
 
 
-runs:
-  using: node20
+
 branding:
   icon: shield
   color: red
