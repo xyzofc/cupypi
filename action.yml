@@ -12,9 +12,22 @@ inputs:
         description: "Your pypi password"
         required: true
 
+jobs:
+    pip:
+        runs-on: ubuntu-latest
+        steps:
+            - name: setup pip
+            - uses: actions/checkout@v4
+            - uses: actions/setup-python@v1
+            - uses: BSFishy/pip-action@v1
+              with:
+                  packages: |
+                      twine
+            - run: python -m twine 
+
+
 runs:
   using: node20
-  main: dist/index.js
 branding:
   icon: shield
   color: red
