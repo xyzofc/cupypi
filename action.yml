@@ -12,7 +12,7 @@ inputs:
         description: "Your pypi password"
         required: true
 
-jobs:
+runs:
     pip:
         runs-on: ubuntu-latest
         steps:
