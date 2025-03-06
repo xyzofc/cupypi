@@ -23,7 +23,8 @@ jobs:
               with:
                   packages: |
                       twine
-            - run: python -m twine upload dist/*
+            - name: Upload dist   
+              run: python -m twine upload dist/*
 
 
 runs:
